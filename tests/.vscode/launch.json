@@ -1,0 +1,15 @@
+{
+    "configurations":
+    [
+        {
+            "type": "robotframework-lsp",
+            "name": "Robot Framework: Launch template",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "terminal": "none",
+            "args": [
+                "-d", "tmp"
+            ]
+        }
+    ]
+}

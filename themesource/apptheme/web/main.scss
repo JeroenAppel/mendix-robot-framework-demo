@@ -1,0 +1,48 @@
+@import "../../../theme/web/custom-variables.scss";
+
+h1, h2, h3, h4, h5,
+.mx-navbar-item {
+  font-family: 'Press Start 2P';
+}
+
+* {
+  min-width: 0;
+  outline: none !important;
+}
+
+.smooth-container {
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.modal-content {
+    background-color: $bg-color-secondary;
+}
+
+.mx-navbar,
+.mx-navbar * {
+    background-color: transparent !important;
+}
+
+header {
+  padding-bottom: 60px;
+}
+
+.mx-navbar ul.nav > .mx-navbar-item.active a,
+.mx-navbar ul.nav > .mx-navbar-item.active a:focus,
+.mx-navbar ul.nav > .mx-navbar-item.active a:hover {
+  text-decoration: underline;
+}
+
+.widget-combobox, .widget-combobox * {
+  background-color: lighten($bg-color-secondary, 5%) !important;
+  color: $font-color-default !important;
+
+  ul {
+    padding-bottom: 5px;
+  }
+
+  li {
+    padding-bottom: 15px;
+  }
+}
