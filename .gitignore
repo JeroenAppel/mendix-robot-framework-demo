@@ -5,8 +5,6 @@
 /.mendix-cache/
 /.classpath
 /.project
-/*.mpr.bak
-/*.mpr.lock
 /modeler-merge-marker
 /project-settings.user.json
 /javasource/*/proxies/
@@ -14,6 +12,9 @@
 /**/node_modules/
 !/javascriptsource/**/node_modules/
 /nativemobile/builds/
+/robotframeworkdemo.mpr.bak
+/robotframeworkdemo.mpr.lock
+/vendorlib/temp/
 
 # Local Cache Files
 theme-cache/
