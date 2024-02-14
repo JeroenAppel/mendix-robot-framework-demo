@@ -13,8 +13,8 @@ This demo is based on a fictional application called "Solar System Explorer" and
 - Update pip ```pip install -U pip``` to ensure latest version is used
 - Install robotframework-browser from the commandline: ```pip install robotframework-browser```
 - Install the node dependencies: run ```rfbrowser init``` in your shell
-    - If rfbrowser is not found, try python -m Browser.entry init
-Check if Robotframework is working: https://github.com/MarketSquare/robotframework-browser?tab=readme-ov-file#testing-with-robot-framework
+    - If rfbrowser is not found, try ```python -m Browser.entry init```
+- Check if Robotframework is working: https://github.com/MarketSquare/robotframework-browser?tab=readme-ov-file#testing-with-robot-framework
 
 ## Getting Started
 Ensure the Mendix application is running on localhost:8080 with the default Settings configuration. This will automatically create TestUsers using the custom Administration module included in the application.
@@ -32,3 +32,6 @@ All workshop exercises are found in the ```.robot```files in the ```./tests/suit
 
 ## Useful Information
 - Each test run creates a Session in the Mendix application. When ran locally, Mendix applications only have a limited set of Sessions available for use. Sessions of users who are not logged in are automatically deleted by the application in this workshop, however sessions of logged-in users can only be deleted manually from the session management page available to MxAdmin.
+
+## Workshop Presentation & Solutions
+[https://github.com/SebastiaandenBoer/mendix-robot-framework-demo/wiki/Workshop-Resources](https://github.com/SebastiaandenBoer/mendix-robot-framework-demo/wiki/Workshop-Resources)
