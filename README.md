@@ -10,9 +10,9 @@ This demo is based on a fictional application called "Solar System Explorer" and
 
 ## Installation Instructions
 - Install node.js e.g. from https://nodejs.org/en/download/
-- Update pip pip install -U pip to ensure latest version is used
+- Update pip ```pip install -U pip``` to ensure latest version is used
 - Install robotframework-browser from the commandline: ```pip install robotframework-browser```
-- Install the node dependencies: ```run rfbrowser init``` in your shell
+- Install the node dependencies: run ```rfbrowser init``` in your shell
     - If rfbrowser is not found, try python -m Browser.entry init
 Check if Robotframework is working: https://github.com/MarketSquare/robotframework-browser?tab=readme-ov-file#testing-with-robot-framework
 
