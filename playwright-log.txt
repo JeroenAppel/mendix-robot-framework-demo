@@ -1,0 +1,81 @@
+{"level":30,"time":"2024-09-19T11:10:29.767Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Listening on 52324"}
+(node:5300) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-09-19T11:10:29.991Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method initializeExtension"}
+{"level":30,"time":"2024-09-19T11:10:29.991Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Initializing extension: C:\\GitHub\\mendix-robot-framework-demo\\tests\\resources\\generic\\extensions\\mendixSelector.js"}
+{"level":30,"time":"2024-09-19T11:10:29.993Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method initializeExtension"}
+{"level":30,"time":"2024-09-19T11:10:29.992Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Adding 1 keywords from JS Extension"}
+{"level":30,"time":"2024-09-19T11:10:30.033Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:30.033Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:30.039Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-09-19T11:10:30.408Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Adding browser to stack: chromium, version: 129.0.6668.29"}
+{"level":30,"time":"2024-09-19T11:10:30.409Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-09-19T11:10:30.409Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-09-19T11:10:30.415Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-09-19T11:10:30.415Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-09-19T11:10:30.415Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Trace file: "}
+{"level":30,"time":"2024-09-19T11:10:30.427Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Changed active context"}
+{"level":30,"time":"2024-09-19T11:10:30.427Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method newContext"}
+{"level":30,"time":"2024-09-19T11:10:30.440Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-09-19T11:10:30.440Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-09-19T11:10:30.602Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Video path: undefined"}
+{"level":30,"time":"2024-09-19T11:10:30.602Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Changed active page"}
+{"level":30,"time":"2024-09-19T11:10:30.624Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method newPage"}
+{"level":30,"time":"2024-09-19T11:10:30.628Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:30.634Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:30.641Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method goTo"}
+{"level":30,"time":"2024-09-19T11:10:32.791Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method goTo"}
+{"level":30,"time":"2024-09-19T11:10:32.795Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method waitForNavigation"}
+{"level":30,"time":"2024-09-19T11:10:32.948Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method waitForNavigation"}
+{"level":30,"time":"2024-09-19T11:10:32.954Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-19T11:10:32.955Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2024-09-19T11:10:33.507Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-19T11:10:33.511Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-19T11:10:33.511Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2024-09-19T11:10:33.512Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-19T11:10:33.514Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-09-19T11:10:33.515Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with mx=loginIdTextBox >> input in page."}
+{"level":30,"time":"2024-09-19T11:10:33.566Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method fillText"}
+{"level":30,"time":"2024-09-19T11:10:33.569Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-09-19T11:10:33.569Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with mx=passwordTextBox >> input in page."}
+{"level":30,"time":"2024-09-19T11:10:33.585Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method fillText"}
+{"level":30,"time":"2024-09-19T11:10:33.589Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getElement"}
+{"level":30,"time":"2024-09-19T11:10:33.589Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with mx=signInButton in page."}
+{"level":30,"time":"2024-09-19T11:10:33.594Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getElement"}
+{"level":30,"time":"2024-09-19T11:10:33.596Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method click"}
+{"level":30,"time":"2024-09-19T11:10:33.597Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with mx=signInButton in page."}
+{"level":30,"time":"2024-09-19T11:10:33.649Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method click"}
+{"level":30,"time":"2024-09-19T11:10:33.654Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-09-19T11:10:33.654Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with mx=signInButton in page."}
+{"level":30,"time":"2024-09-19T11:10:33.834Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-09-19T11:10:33.845Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getElement"}
+{"level":30,"time":"2024-09-19T11:10:33.845Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with css=.mx-navbar-item >> a[title='Logout'] in page."}
+{"level":30,"time":"2024-09-19T11:10:33.881Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getElement"}
+{"level":30,"time":"2024-09-19T11:10:33.884Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method click"}
+{"level":30,"time":"2024-09-19T11:10:33.884Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with css=.mx-navbar-item >> a[title='Logout'] in page."}
+{"level":30,"time":"2024-09-19T11:10:33.945Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method click"}
+{"level":30,"time":"2024-09-19T11:10:33.949Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-09-19T11:10:33.949Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Strict mode is enabled, find Locator with css=.mx-navbar-item >> a[title='Logout'] in page."}
+{"level":30,"time":"2024-09-19T11:10:34.025Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-09-19T11:10:34.031Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:34.033Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:34.039Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-09-19T11:10:34.051Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Removed page=3527ebdc-7d5c-4599-a5aa-6ee645e9df04 from context=b65378f6-d161-42d7-aad7-e68df29a99ab page stack"}
+{"level":30,"time":"2024-09-19T11:10:34.266Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\index.js:10748:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\index.js:11364:59)
+    at PlaywrightServer.setTimeout (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\index.js:11603:57)
+    at Object.onReceiveHalfClose (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\appelj\AppData\Roaming\Python\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-09-19T11:10:34.294Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:34.294Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-09-19T11:10:36.334Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-09-19T11:10:36.334Z","pid":5300,"hostname":"CLEVR-6ZSWQX3","msg":"End of node method closeAllBrowsers"}

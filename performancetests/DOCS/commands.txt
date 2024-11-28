@@ -1,0 +1,37 @@
+// Start K6 and Grafana in a dockerized environment:
+docker-compose up -d
+
+// Grafana is now available at localhost:3000. A user needs to be setup manually.
+// InfluxDB is now available at localhost:8086. A user needs to be setup manually.
+// Copy InfluxDB API token: kcaij86X4_RcRhYqFD26vODVgW6U4fRT9Ji0E2c_04ey0N3pRb6lqJc7hdzOxIce6FQzWjFz_UpVW_NCen4ktQ==
+
+// This script won't output to InfluxDB
+docker exec -it k6 k6 run /scripts/api-test.js
+
+// This script will output to InfluxDB
+docker exec -it k6 k6 run /scripts/api-test.js -o xk6-influxdb
+
+// Setup details Grafana
+// Use depr InfluxQL language for success (documented by grafana)
+// https://docs.influxdata.com/influxdb/v2/tools/grafana/
+// https://grafana.com/docs/k6/latest/results-output/real-time/influxdb/
+
+TODO: Add needed extensions for playwright and others to build:
+https://grafana.com/docs/k6/latest/extensions/explore/
+
+Investigate: Cloud K6: https://grafana.com/products/cloud/k6/
+
+Creating custom build:
+Installing go: https://www.cherryservers.com/blog/install-go-ubuntu
+Go libs: https://go.dev/dl/
+Grafana xk6: https://github.com/grafana/xk6-output-influxdb?tab=readme-ov-file
+
+NOTE: More xk6 output parameters can be set if needed.
+NOTE: Dashboards in Graphana should be added manually
+
+To watch: https://www.youtube.com/watch?v=qnPGSRc-BhU
+Important: metrics in Graphana don't match in most cases now > old SQL
+
+
+sudo docker tag custom-k6-influxdb2 jeroenappelclevr/custom-k6-influxdb2
+sudo docker push jeroenappelclevr/custom-k6-influxdb2

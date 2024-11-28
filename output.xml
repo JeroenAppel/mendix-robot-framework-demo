@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-19T13:10:29.206486" rpa="false" schemaversion="5">
+<suite id="s1" name="Authentication" source="c:\GitHub\mendix-robot-framework-demo\tests\suites\authentication.robot">
+<kw name="Default Suite Setup" owner="mendix" type="SETUP">
+<kw name="Start Default Browser" owner="mendix">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-09-19T13:10:30.036221" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\GitHub\\mendix-robot-framework-demo\\browser\\traces\\2875f58a-2c34-4d70-9246-b85263c3e361"}</msg>
+<msg time="2024-09-19T13:10:30.410861" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\GitHub\\mendix-robot-framework-demo\\browser\\traces\\2875f58a-2c34-4d70-9246-b85263c3e361"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS_MODE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.035214" elapsed="0.375647"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2024-09-19T13:10:30.412288" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2024-09-19T13:10:30.428740" level="INFO">Successfully created context. </msg>
+<msg time="2024-09-19T13:10:30.428740" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport=${VIEWPORT}</arg>
+<arg>acceptDownloads=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.410861" elapsed="0.018878"/>
+</kw>
+<doc>Starts both a new browser and context with default parameters, for convenience.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.034707" elapsed="0.395032"/>
+</kw>
+<kw name="Register Mendix Selector" owner="Browser">
+<msg time="2024-09-19T13:10:30.435083" level="INFO">ok</msg>
+<doc>TODO: Add rfdoc string to exposed function to create documentation</doc>
+<status status="PASS" start="2024-09-19T13:10:30.429739" elapsed="0.006348"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-09-19T13:10:30.624828" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.436087" elapsed="0.189740"/>
+</kw>
+<doc>Default Suite Setup for Mendix applications.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.034707" elapsed="0.591120"/>
+</kw>
+<test id="s1-t1" name="Authenticate as Q" line="18">
+<kw name="Login with UserRole" owner="authentication" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-09-19T13:10:30.636830" level="INFO">${username} = TestUser_Q</msg>
+<var>${username}</var>
+<arg>SEPARATOR=_</arg>
+<arg>TestUser</arg>
+<arg>${userrole}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.635827" elapsed="0.002000"/>
+</kw>
+<kw name="Login" owner="authentication">
+<kw name="Go to Mendix Page" owner="mendix">
+<kw name="Go To" owner="Browser">
+<msg time="2024-09-19T13:10:32.792355" level="INFO">Successfully opened URL http://localhost:8080/p/login</msg>
+<arg>${APP_URL}/p/${path}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.638827" elapsed="2.153528"/>
+</kw>
+<kw name="Wait For Navigation" owner="Browser">
+<arg>${APP_URL}/p/${path}</arg>
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until page has navigated to given ``url``.</doc>
+<status status="PASS" start="2024-09-19T13:10:32.792355" elapsed="0.157074"/>
+</kw>
+<kw name="Wait Until Network Is Idle" owner="Browser">
+<msg time="2024-09-19T13:10:32.949429" level="WARN">Keyword 'Browser.Wait Until Network Is Idle' is deprecated. Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</msg>
+<msg time="2024-09-19T13:10:32.951401" level="INFO">Waiting page load to state to receive networkidle in 10000.0</msg>
+<msg time="2024-09-19T13:10:33.508697" level="INFO">Load state networkidle got in 10000</msg>
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>*DEPRECATED!!* Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</doc>
+<status status="PASS" start="2024-09-19T13:10:32.949429" elapsed="0.559268"/>
+</kw>
+<arg>login</arg>
+<doc>Opens a named path (i.e. page) of a Mendix application using it's path, i.e. providing 'planets/Mars' would navigate to http://localhost:8080/p/planets/Mars. Does not work for Microflows.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.637827" elapsed="2.870870"/>
+</kw>
+<kw name="Wait Until Network Is Idle" owner="Browser">
+<msg time="2024-09-19T13:10:33.508697" level="WARN">Keyword 'Browser.Wait Until Network Is Idle' is deprecated. Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</msg>
+<msg time="2024-09-19T13:10:33.509720" level="INFO">Waiting page load to state to receive networkidle in 10000.0</msg>
+<msg time="2024-09-19T13:10:33.512693" level="INFO">Load state networkidle got in 10000</msg>
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>*DEPRECATED!!* Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.508697" elapsed="0.003996"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-09-19T13:10:33.513693" level="INFO">Fills the text 'TestUser_Q' in the given field.</msg>
+<arg>mx=loginIdTextBox &gt;&gt; input</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.512693" elapsed="0.054003"/>
+</kw>
+<kw name="Fill Secret" owner="Browser">
+<arg>mx=passwordTextBox &gt;&gt; input</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Fills the given secret from ``variable_name`` into the
+text field found by ``selector``.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.566696" elapsed="0.019035"/>
+</kw>
+<kw name="Get Element" owner="Browser">
+<msg time="2024-09-19T13:10:33.594958" level="INFO">Locator found successfully.</msg>
+<msg time="2024-09-19T13:10:33.594958" level="INFO">${login_btn} = mx=signInButton</msg>
+<var>${login_btn}</var>
+<arg>mx=signInButton</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2024-09-19T13:10:33.586949" elapsed="0.008009"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-09-19T13:10:33.594958" level="INFO">Clicks the element 'mx=signInButton'.</msg>
+<arg>${login_btn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.594958" elapsed="0.055883"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-09-19T13:10:33.836375" level="INFO">Waited for Element with selector mx=signInButton at state detached</msg>
+<arg>${login_btn}</arg>
+<arg>detached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.651842" elapsed="0.185534"/>
+</kw>
+<arg>${username}</arg>
+<arg>$TESTUSER_PASSWORD</arg>
+<doc>Authenticate with an Account, given its username and password.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.637827" elapsed="3.199549"/>
+</kw>
+<arg>Q</arg>
+<doc>Authenticate with an Account based on the name of its UserRole.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.635827" elapsed="3.201549"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-19T13:10:33.839401" level="INFO">Logged in as Q</msg>
+<arg>Logged in as Q</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.839401" elapsed="0.000978"/>
+</kw>
+<kw name="Logout" owner="authentication" type="TEARDOWN">
+<kw name="Get Element" owner="Browser">
+<msg time="2024-09-19T13:10:33.882213" level="INFO">Locator found successfully.</msg>
+<msg time="2024-09-19T13:10:33.882213" level="INFO">${logout_btn} = css=.mx-navbar-item &gt;&gt; a[title='Logout']</msg>
+<var>${logout_btn}</var>
+<arg>css=.mx-navbar-item &gt;&gt; a[title='Logout']</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2024-09-19T13:10:33.842374" elapsed="0.039839"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-09-19T13:10:33.883213" level="INFO">Clicks the element 'css=.mx-navbar-item &gt;&gt; a[title='Logout']'.</msg>
+<arg>${logout_btn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.882213" elapsed="0.064641"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-09-19T13:10:34.026705" level="INFO">Waited for Element with selector css=.mx-navbar-item &gt;&gt; a[title='Logout'] at state detached</msg>
+<arg>${logout_btn}</arg>
+<arg>detached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.946854" elapsed="0.079851"/>
+</kw>
+<doc>Logout from the current Mendix application.</doc>
+<status status="PASS" start="2024-09-19T13:10:33.841376" elapsed="0.185329"/>
+</kw>
+<doc>Authenticate with the Q TestUser.</doc>
+<status status="PASS" start="2024-09-19T13:10:30.625827" elapsed="3.400878"/>
+</test>
+<kw name="Default Suite Teardown" owner="mendix" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-09-19T13:10:34.266954" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-19T13:10:34.036703" elapsed="0.230251"/>
+</kw>
+<doc>Default Suite Teardown for Mendix applications.</doc>
+<status status="PASS" start="2024-09-19T13:10:34.036703" elapsed="0.231367"/>
+</kw>
+<doc>Verifies that the TestUser_ syntax for authentication is working for each UserRole.</doc>
+<status status="PASS" start="2024-09-19T13:10:29.211487" elapsed="5.056583"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Authentication">Authentication</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-19T13:10:32.949429" level="WARN">Keyword 'Browser.Wait Until Network Is Idle' is deprecated. Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</msg>
+<msg time="2024-09-19T13:10:33.508697" level="WARN">Keyword 'Browser.Wait Until Network Is Idle' is deprecated. Use `Wait For Load State` instead. rfbrowser transform --wait-until-network-is-idle path/to/test command automatically transforms keyword to new format.</msg>
+</errors>
+</robot>

@@ -1,0 +1,63 @@
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - "C:/GitHub/mendix-robot-framework-demo/performancetests/data-grafana:/var/lib/grafana"
+      - "C:/GitHub/mendix-robot-framework-demo/performancetests/data-grafana/provisioning:/etc/grafana/provisioning"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - influxdb
+    restart: always
+    networks:
+      - grafana_k6_network
+
+  k6:
+    image: jeroenappelclevr/custom-k6-influxdb2
+    container_name: k6
+    # We bind two folders to the k6 container, so the scripts and files can persist.
+    # This needs to be adjusted manually.
+    volumes:
+      - "C:/GitHub/mendix-robot-framework-demo/performancetests/data-k6/scripts:/scripts"
+      - "C:/GitHub/mendix-robot-framework-demo/performancetests/data-k6/reports:/reports"
+    working_dir: /scripts
+    #environment:
+    #  - K6_OUT=influxdb=http://influxdb:8086/k6 # Auto-output to InfluxDB
+    environment:
+      - K6_INFLUXDB_ORGANIZATION=CLEVR
+      - K6_INFLUXDB_BUCKET=k6-metrics
+      - K6_INFLUXDB_TOKEN=kcaij86X4_RcRhYqFD26vODVgW6U4fRT9Ji0E2c_04ey0N3pRb6lqJc7hdzOxIce6FQzWjFz_UpVW_NCen4ktQ==
+      - K6_INFLUXDB_ADDR=http://influxdb:8086
+    depends_on:
+      - influxdb
+    networks:
+      - grafana_k6_network
+    # By adding the entry point, we can interact with the k6 container from our terminal interactivly.
+    entrypoint: ["tail", "-f", "/dev/null"]
+    restart: always
+
+  influxdb:
+    image: influxdb
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - "C:/GitHub/mendix-robot-framework-demo/performancetests/data-influxdb:/var/lib/influxdb"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=pipelineuser
+      - DOCKER_INFLUXDB_INIT_PASSWORD=zoz9C2J1UN8Tt^7#
+      - DOCKER_INFLUXDB_INIT_ORG=CLEVR
+      - DOCKER_INFLUXDB_INIT_BUCKET=k6-metrics
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=kcaij86X4_RcRhYqFD26vODVgW6U4fRT9Ji0E2c_04ey0N3pRb6lqJc7hdzOxIce6FQzWjFz_UpVW_NCen4ktQ==
+    restart: always
+    networks:
+      - grafana_k6_network
+
+networks:
+  grafana_k6_network:
+    driver: bridge
